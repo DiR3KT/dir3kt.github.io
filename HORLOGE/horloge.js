@@ -69,15 +69,15 @@ function draw() {
 
 // texte
 	noStroke();
-	textSize(circleSize/12);
+	textSize(circleSize/10);
 	strokeWeight(2);
 	textFont(font);
 	textAlign(CENTER);
 	fill(backcolor+60);
-	text('Horloge', cx, cy-circleSize/4);
-	textSize(circleSize/20);
+	//text('Horloge', cx, cy-circleSize/4);
+	textSize(circleSize/16);
 	fill(backcolor+60);
-	text(time, cx, cy-circleSize/6);
+	text(time, cx, cy+circleSize/5);
 	textSize(20);
 	textAlign(LEFT);
 	fill(backcolor+60);
