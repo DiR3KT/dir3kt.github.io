@@ -1,2 +1,2 @@
 # DiREKT
-**Horloge** : [http://dir3kt.github.io/HORLOGE/]
+[**Horloge** : ](http://dir3kt.github.io/HORLOGE/)
