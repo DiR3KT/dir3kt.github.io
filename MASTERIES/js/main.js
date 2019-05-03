@@ -43,7 +43,7 @@ function getNameAndRegionByUrl() //Retrieve summoner name and region in the url.
   if (pName != null && pRegion != null)
   {
     //get summoner data
-    $.get("http://www.masteryprofiler.com/php/api-caller.php?op=1&platformId=" + pRegion + "&name=" + pName, function(jsonSummData)){
+    $.get("http://www.masteryprofiler.com/php/api-caller.php?op=1&platformId=" + pRegion + "&name=" + pName, function(jsonSummData){
       var pData;
 
       try
