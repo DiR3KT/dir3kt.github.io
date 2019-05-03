@@ -1,16 +1,24 @@
 //----------------------------------------------------------------
+// ---MasteryChecker---
 // Test created by @DiiREKT
 // Demonstrate the power of Riot API.
-// Educational purposes only, I do not sell any of the program
-// and might have got inspired by some others.
+// MasteryChecker isn’t endorsed by Riot Games and doesn’t reflect the views or opinions of Riot Games
+// or anyone officially involved in producing or managing League of Legends. League of Legends and Riot Games are
+// trademarks or registered trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc.
 //----------------------------------------------------------------
 
-//upon loading page
+//--------------VARIABLES---------------
+var APIkey = "RGAPI-4d1d64d1-4360-4169-951b-f0e9fdb20910";
+
+
+
+
+
 console.log("page chargée");
 
-function getNameAndRegionByUrl()
+function getNameAndRegionByUrl() //Retrieve summoner name and region in the url.
 {
-  $.extend({
+  $.extend({ //jquery solution to get variables from url
     getUrlVars: function(){
       var vars = [], hash;
       var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
@@ -27,14 +35,15 @@ function getNameAndRegionByUrl()
     }
   });
 
-
+  //get variables in the url starting with "?name=" and "&region="
   var pName = $.getUrlVar('name');
   var pRegion = $.getUrlVar('region');
+
 
   if (pName != null && pRegion != null)
   {
     //get summoner data
-    $.get("http://www.masteryprofiler.com/php/api-caller.php?op=1&platformId=" + GetPlatformId(pRegion) + "&name=" + pName, function(jsonSummData){
+    $.get("http://www.masteryprofiler.com/php/api-caller.php?op=1&platformId=" + pRegion + "&name=" + pName, function(jsonSummData)){
       var pData;
 
       try
@@ -48,10 +57,6 @@ function getNameAndRegionByUrl()
         return;
       }
 
-      $('#loading-section').removeClass('section-hidden');
-      $('#intro-header').text("Loading").css({'color':'white'});
-      $('#bar-intro>span').width("30%");
-
       var pResult = "";
 
       //store data
@@ -61,12 +66,12 @@ function getNameAndRegionByUrl()
     }
     else if (pName != null || pRegion != null)
     {
-      p_message = "Invalid URL. Please use the section above to provide a Summoner Name and a Region.";
-      DisplayError(p_message);
+      console.log("INVALID URL")
+      console.log("START BY USING https://dir3kt.github.io/MASTERIES/index.html?name=[NAME]&region=[REGION]")
     }
     else
     {
-      $('#intro-header').text("");
-      $('#error-info').text("Begin by providing a League of Legends Summoner Name and Region.").css({'color':'white'});
+      console.log("INVALID URL")
+      console.log("START BY USING https://dir3kt.github.io/MASTERIES/index.html?name=[NAME]&region=[REGION]")
     }
   }
