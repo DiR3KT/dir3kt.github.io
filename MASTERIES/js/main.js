@@ -64,11 +64,6 @@ function getNameAndRegionByUrl() //Retrieve summoner name and region in the url.
 
       console.log ("retrieved summoner id based on region and name " + m_data["summoner"]["name"] + " " + m_data["summoner"]["id"]);
     })
-    else if (pName != null || pRegion != null)
-    {
-      console.log("INVALID URL")
-      console.log("START BY USING https://dir3kt.github.io/MASTERIES/index.html?name=[NAME]&region=[REGION]")
-    }
     else
     {
       console.log("INVALID URL")
