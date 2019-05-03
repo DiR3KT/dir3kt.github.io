@@ -66,7 +66,7 @@ function getNameAndRegionByUrl() //Retrieve summoner name and region in the url.
     })
     else
     {
-      console.log("INVALID URL")
-      console.log("START BY USING https://dir3kt.github.io/MASTERIES/index.html?name=[NAME]&region=[REGION]")
+      console.log("INVALID URL");
+      console.log("START BY USING https://dir3kt.github.io/MASTERIES/index.html?name=[NAME]&region=[REGION]");
     }
   }
