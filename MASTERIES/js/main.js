@@ -10,10 +10,9 @@
 //--------------VARIABLES---------------
 var APIkey = "RGAPI-4d1d64d1-4360-4169-951b-f0e9fdb20910";
 
-
 console.log("page chargée");
 
-function getNameAndRegionByUrl() //Retrieve summoner name and region in the url.
+function getNameAndRegionFromUrl() //Retrieve summoner name and region in the url.
 {
   $.extend({ //jquery solution to get variables from url
     getUrlVars: function(){
@@ -40,28 +39,16 @@ function getNameAndRegionByUrl() //Retrieve summoner name and region in the url.
   if (pName != null && pRegion != null)
   {
     //get summoner data
-    $.get("http://www.masteryprofiler.com/php/api-caller.php?op=1&platformId=" + pRegion + "&name=" + pName, function(jsonSummData)
-    {
+    $.get("http://www.masteryprofiler.com/php/api-caller.php?op=1&platformId=" + pRegion + "&name=" + pName,
+    function(jsonSummData) {
       var pData;
 
-      try
-      {
-        pData = JSON.parse(jsonSummData);
-      }
-      catch (e)
-      {
-        p_message = jsonSummData;
-        DisplayError(p_message);
-        return;
-      }
+      pData = JSON.parse(jsonSummData);
 
-      var pResult = "";
-
-      //store data
       m_data["summoner"] = pData;
 
       console.log ("retrieved summoner id based on region and name " + m_data["summoner"]["name"] + " " + m_data["summoner"]["id"]);
-    })
+    },"jsonp")
   }
   else
   {
@@ -69,3 +56,5 @@ function getNameAndRegionByUrl() //Retrieve summoner name and region in the url.
       console.log("START BY USING https://dir3kt.github.io/MASTERIES/index.html?name=[NAME]&region=[REGION]");
   }
 }
+
+getNameAndRegionFromUrl();
