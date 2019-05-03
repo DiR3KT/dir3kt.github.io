@@ -63,7 +63,7 @@ function getNameAndRegionByUrl() //Retrieve summoner name and region in the url.
       m_data["summoner"] = pData;
 
       console.log ("retrieved summoner id based on region and name " + m_data["summoner"]["name"] + " " + m_data["summoner"]["id"]);
-    }
+    })
     else if (pName != null || pRegion != null)
     {
       console.log("INVALID URL")
