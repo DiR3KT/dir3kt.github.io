@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>LOL SPELL GUESSER</title>
+    <script type="text/javascript" src="js/onespell.js"></script>
+    <link rel="stylesheet" href="css/onespell.css">
+  </head>
+  <body onload="printChamp()">
+    <button id="reload_button" type="button" onclick="printChamp()"></button>
+    <img id="placeholder_p" src=" https://cdn.communitydragon.org/9.9.1/champion/generic/square" width="64" height="64">
+    <img id="placeholder_q" src=" https://cdn.communitydragon.org/9.9.1/champion/generic/square" width="64" height="64">
+    <img id="placeholder_w" src=" https://cdn.communitydragon.org/9.9.1/champion/generic/square" width="64" height="64">
+    <img id="placeholder_e" src=" https://cdn.communitydragon.org/9.9.1/champion/generic/square" width="64" height="64">
+    <img id="placeholder_r" src=" https://cdn.communitydragon.org/9.9.1/champion/generic/square" width="64" height="64">
+    <br>
+    <br>
+    <input id="guess" placeholder="TYPE THE NAME OF CHAMPION"/>
+    <button id="userButton" type="submit" onclick="validateGuess()">GUESS</button>
+    <br>
+    <br>
+    <br>
+    <img id="yesno" src="js/blank.png" alt="yes or no">
+    <h2 id="goodOne"> </h2>
+  </body>
+</html>
