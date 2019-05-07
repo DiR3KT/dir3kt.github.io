@@ -2,25 +2,31 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>LOL SPELL GUESSER</title>
-    <script type="text/javascript" src="js/onespell.js"></script>
-    <link rel="stylesheet" href="css/onespell.css">
+    <title>EASY LOL GUESSER</title>
+    <script type="text/javascript" src="js/easy.js"></script>
+    <link rel="stylesheet" href="css/easy.css">
+    <link rel="icon" href="assets/favicon.ico"/>
   </head>
   <body onload="printChamp()">
-    <button id="reload_button" type="button" onclick="printChamp()"></button>
-    <img id="placeholder_p" src=" https://cdn.communitydragon.org/9.9.1/champion/generic/square" width="64" height="64">
-    <img id="placeholder_q" src=" https://cdn.communitydragon.org/9.9.1/champion/generic/square" width="64" height="64">
-    <img id="placeholder_w" src=" https://cdn.communitydragon.org/9.9.1/champion/generic/square" width="64" height="64">
-    <img id="placeholder_e" src=" https://cdn.communitydragon.org/9.9.1/champion/generic/square" width="64" height="64">
-    <img id="placeholder_r" src=" https://cdn.communitydragon.org/9.9.1/champion/generic/square" width="64" height="64">
-    <br>
-    <br>
-    <input id="guess" placeholder="TYPE THE NAME OF CHAMPION"/>
-    <button id="userButton" type="submit" onclick="validateGuess()">GUESS</button>
-    <br>
-    <br>
-    <br>
-    <img id="yesno" src="js/blank.png" alt="yes or no">
-    <h2 id="goodOne"> </h2>
+    <div class="header">
+      <h1 id="title">EASY</h1>
+      <h3 id="subtitle">Guess the champion based on its 5 abilities.</h3>
+    </div>
+    <div class="mainContainer">
+      <button id="reload_button" type="button" onclick="printChamp()"></button>
+      <img id="placeholder_p" src=" https://cdn.communitydragon.org/9.9.1/champion/generic/square" width="64" height="64">
+      <img id="placeholder_q" src=" https://cdn.communitydragon.org/9.9.1/champion/generic/square" width="64" height="64">
+      <img id="placeholder_w" src=" https://cdn.communitydragon.org/9.9.1/champion/generic/square" width="64" height="64">
+      <img id="placeholder_e" src=" https://cdn.communitydragon.org/9.9.1/champion/generic/square" width="64" height="64">
+      <img id="placeholder_r" src=" https://cdn.communitydragon.org/9.9.1/champion/generic/square" width="64" height="64">
+      <br>
+      <br>
+      <input id="guess" placeholder="TYPE THE NAME OF THE CHAMPION"/>
+      <button class="button" id="userButton" type="submit" onclick="validateGuess()">GUESS</button>
+      <br>
+      <br>
+      <img id="yesno" src="assets/blank.png" style="opacity:0;" width="120" height="120" alt="yes or no">
+      <h1 id="goodOne"> </h1>
+    </div>
   </body>
 </html>
