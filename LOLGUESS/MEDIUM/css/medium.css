@@ -19,6 +19,7 @@
 input {
   color: black !important;
 }
+
 html {
   height: 100%;
   background-image: url(../../assets/splash/sylas.jpg);
@@ -29,15 +30,16 @@ html {
 }
 
 #title {
+  font-family: BeaufortBold, sans-serif;
   text-align: center;
-  font-size: 50px;
+  font-size: 500%;
   margin: 5px;
   margin-top: 7%;
 }
 
 #subtitle {
   text-align: center;
-  font-size: 20px;
+  font-size: 100%;
   margin: 5px;
 }
 

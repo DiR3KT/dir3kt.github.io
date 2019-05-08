@@ -16,16 +16,19 @@
   color: white;
 }
 
+input {
+  color: black !important;
+}
+
 html {
   height: 100%;
   background-image: url(../../assets/splash/sylas.jpg);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-position: center, center;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
-input {
-  color: black !important;
-}
 #title {
   text-align: center;
   font-size: 50px;
@@ -55,18 +58,35 @@ input {
   width: 100%;
   height: auto;
   padding: 2px 2px;
-  margin: 2px 0;
+  margin: 10px;
+  border: 3px;
+  border-radius: 4px;
   box-sizing: border-box;
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
+  background-image: url('../../assets/champion.png');
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+  padding-left: 40px;
+}
+
+input:focus {
+  border: 3px solid #555;
 }
 
 #reload_button {
   background-image: url("../assets/reload.png");
   background-size: cover;
-  height: 52px;
-  width: 52px;
+  height: 70px;
+  width: 70px;
   margin-right: 20px;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
 }
 
 .button {

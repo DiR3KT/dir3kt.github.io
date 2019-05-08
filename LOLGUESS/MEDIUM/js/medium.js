@@ -71,4 +71,12 @@ function validateGuess()
   }
   champions.shift();
   printChamp()
+  playerGuess.value = " ";
 }
+
+var champInput = document.getElementById("guess");
+champInput.addEventListener('keydown', function(e){
+  if (e.keyCode === 13) {
+    validateGuess();
+  }
+});
