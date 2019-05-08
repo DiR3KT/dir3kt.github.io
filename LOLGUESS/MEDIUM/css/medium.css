@@ -38,6 +38,7 @@ html {
 }
 
 #subtitle {
+  font-family: BeaufortRegular, sans-serif;
   text-align: center;
   font-size: 20px;
   margin: 5px;
@@ -56,6 +57,7 @@ html {
 }
 
 input {
+  font-family: BeaufortBold, sans-serif;
   width: 70%;
   height: auto;
   padding: 2px 2px;
@@ -103,4 +105,8 @@ input {
 .button:hover {
   background-color: #4CAF50; /* Green */
   color: white;
+}
+
+#goodOne {
+  font-family: BeaufortBold, sans-serif;
 }
