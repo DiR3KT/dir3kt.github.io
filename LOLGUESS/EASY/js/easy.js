@@ -1,5 +1,6 @@
 //Made by @DiiREKT
 var p,q,w,e,r,html,bgURL;
+var mistakes=0;
 var champions = ['aatrox', 'ahri', 'akali', 'alistar', 'amumu', 'anivia', 'annie', 'ashe', 'aurelionsol', 'azir', 'bard', 'blitzcrank', 'brand', 'braum', 'caitlyn', 'camille', 'cassiopeia', 'chogath', 'corki', 'darius', 'diana', 'draven', 'drmundo', 'ekko', 'elise', 'evelynn', 'ezreal', 'fiddlesticks', 'fiora', 'fizz', 'galio', 'gangplank', 'garen', 'gnar', 'gragas', 'graves', 'hecarim', 'heimerdinger', 'illaoi', 'irelia', 'ivern', 'janna', 'jarvaniv', 'jax', 'jayce', 'jhin', 'jinx', 'kaisa', 'kalista', 'karma', 'karthus', 'kassadin', 'katarina', 'kayle', 'kayn', 'kennen', 'khazix', 'kindred', 'kled', 'kogmaw', 'leblanc', 'leesin', 'leona', 'lissandra', 'lucian', 'lulu', 'lux', 'malphite', 'malzahar', 'maokai', 'masteryi', 'missfortune', 'mordekaiser', 'morgana', 'nami', 'nasus', 'nautilus', 'nidalee', 'nocturne', 'nunu', 'olaf', 'orianna', 'ornn', 'pantheon', 'poppy', 'pyke', 'quinn', 'rakan', 'rammus', 'reksai', 'renekton', 'rengar', 'riven', 'rumble', 'ryze', 'sejuani', 'shaco', 'shen', 'shyvana', 'singed', 'sion', 'neeko', 'sivir', 'skarner', 'sona', 'soraka', 'swain', 'sylas', 'syndra', 'tahmkench', 'taliyah', 'talon', 'taric', 'teemo', 'thresh', 'tristana', 'trundle', 'tryndamere', 'twistedfate', 'twitch', 'udyr', 'urgot', 'varus', 'vayne', 'veigar', 'velkoz', 'vi', 'viktor', 'vladimir', 'volibear', 'warwick', 'xayah', 'xerath', 'xinzhao', 'yasuo', 'yorick', 'zac', 'zed', 'ziggs', 'zilean', 'zoe', 'zyra'];
 
 //bgURL = "https://cdn.communitydragon.org/9.9.1/champion/"+champions[0]+"/splash-art";
@@ -21,23 +22,31 @@ function shuffle(array)
 
 function printChamp()
 {
-  shuffle(champions);
-  p = "https://cdn.communitydragon.org/9.9.1/champion/" + champions[0] + "/ability-icon/p";
-  q = "https://cdn.communitydragon.org/9.9.1/champion/" + champions[0] + "/ability-icon/q";
-  w = "https://cdn.communitydragon.org/9.9.1/champion/" + champions[0] + "/ability-icon/w";
-  e = "https://cdn.communitydragon.org/9.9.1/champion/" + champions[0] + "/ability-icon/e";
-  r = "https://cdn.communitydragon.org/9.9.1/champion/" + champions[0] + "/ability-icon/r";
-  document.getElementById("placeholder_p").src=p;
-  document.getElementById("placeholder_q").src=q;
-  document.getElementById("placeholder_w").src=w;
-  document.getElementById("placeholder_e").src=e;
-  document.getElementById("placeholder_r").src=r;
+  if (champions.length!==0){
+    shuffle(champions);
+    p = "https://cdn.communitydragon.org/9.9.1/champion/" + champions[0] + "/ability-icon/p";
+    q = "https://cdn.communitydragon.org/9.9.1/champion/" + champions[0] + "/ability-icon/q";
+    w = "https://cdn.communitydragon.org/9.9.1/champion/" + champions[0] + "/ability-icon/w";
+    e = "https://cdn.communitydragon.org/9.9.1/champion/" + champions[0] + "/ability-icon/e";
+    r = "https://cdn.communitydragon.org/9.9.1/champion/" + champions[0] + "/ability-icon/r";
+    document.getElementById("placeholder_p").src=p;
+    document.getElementById("placeholder_q").src=q;
+    document.getElementById("placeholder_w").src=w;
+    document.getElementById("placeholder_e").src=e;
+    document.getElementById("placeholder_r").src=r;
+  }
+  else {
+    alert("You won! You made "+mistakes+" mistakes...");
+    location.reload();
+  }
 }
 
 function validateGuess()
 {
   playerGuess = document.getElementById("guess").value;
-  if (playerGuess==champions[0])
+  playerGuess= playerGuess.toLowerCase();
+  playerGuessRatio = compareTwoStrings(playerGuess,champions[0]);
+  if (playerGuessRatio>0.6)
   {
     console.log("GOOD ANSWER");
     YESURL="https://cdn.communitydragon.org/9.9.1/champion/"+champions[0]+"/square";
@@ -52,6 +61,7 @@ function validateGuess()
     document.getElementById("yesno").src=NOURL;
     document.getElementById("yesno").style.opacity=1;
     document.getElementById("goodOne").innerHTML="No! It was "+ champions[0];
+    mistakes++;
   }
   champions.shift()
   printChamp()

@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>EASY LOL GUESSER</title>
     <script type="text/javascript" src="js/easy.js"></script>
+    <script type="text/javascript" src="js/compare-strings.js"></script>
     <link rel="stylesheet" href="css/easy.css">
     <link rel="icon" href="assets/favicon.ico"/>
   </head>
@@ -20,7 +21,7 @@
       <img id="placeholder_r" src=" https://cdn.communitydragon.org/9.9.1/champion/generic/square" width="64" height="64">
       <br>
       <br>
-      <input id="guess" placeholder="TYPE THE NAME OF THE CHAMPION"/>
+      <input id="guess"/>
       <button class="button" id="userButton" type="submit" onclick="validateGuess()">GUESS</button>
       <br>
       <br>
@@ -28,4 +29,12 @@
       <h1 id="goodOne"> </h1>
     </div>
   </body>
+  <script type="text/javascript">
+    document.getElementById("guess").onkeypress = function(event){
+      if (event.keyCode == 13 || event.which == 13){
+        validateGuess()
+        document.getElementById("guess").value="";
+      }
+    };
+  </script>
 </html>
