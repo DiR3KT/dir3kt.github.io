@@ -3,10 +3,25 @@
   <head>
     <meta charset="utf-8">
     <title>Couille man</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/main.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
-    <h1>test</h1>
+    <h1>Input your <strong>summoner's name</strong> and <strong>region</strong></h1>
+    <div class="left">
+      <input id="name" placeholder="NAME">
+    </div>
+    <div class="right">
+      <select id="region">
+        <option value="euw1">EUW</option>
+        <option value="na1">NA</option>
+        <option value="">more coming soon</option>
+      </select>
+    </div>
+    <br>
+    <div class="submit">
+      <button id="submit" onclick="retrieveDataHTML()">SUBMIT!</button>
+    </div>
   </body>
 </html>

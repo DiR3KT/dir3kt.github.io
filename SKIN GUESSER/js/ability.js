@@ -42,3 +42,30 @@ var en_darius = ["Hemorrhage", "Decimate", "Crippling Strike", "Apprehend", "Nox
 var en_diana = ["Moonsilver Blade", "Crescent Strike", "Pale Cascade", "Moonfall", "Lunar Rush"];
 var en_draven = ["League of Draven", "Spinning Axe", "Blood Rush", "Stand Aside", "Whirling Death"];
 var en_drmundo = ["Adrenaline Rush", "Infected Cleaver", "Burning Agony", "Masochism", "Sadism"];
+var en_ekko = ["Z-Drive Resonance", "Timewinder", "Parallel COnvergence", "Phase Dive", "Chronobreak"];
+var en_elise = ["Spider Queen", "Neurotoxin/Venomous Bite", "Volatile Spiderling/Skittering Frenzy", "Rappel", "Spider Form/Human Form"];
+var en_evelynn = ["Demon Shade", "Hate Spike", "Allure", "Whiplash", "Last Caress"];
+var en_ezreal = ["Rising Spell Force", "Mystic Shot", "Essence Flux", "Arcane Shift", "Trueshot Barrage"];
+var en_fiddlesticks = ["Dread", "Terrify", "Drain", "Dark Wind", "Crowstorm"];
+var en_fiora = ["Duelist's Dance", "Lunge", "Riposte", "Bladework", "Grand Challenge"];
+var en_fizz = ["Nimble Fighter", "Urchin Strike", "Seastone Trident", "Playful/Trickster", "Chum the Waters"];
+var en_galio = ["Colossal Smash", "Winds of War", "Shield of Durand", "Justice Punch", "Hero's Entrance"];
+var en_gangplank = ["Trial By Fire", "Parrrley", "Remove Scurvy", "Powder Keg", "Cannon Barrage"];
+var en_garen = ["Perseverance", "Decisive Strike", "Courage", "Judgment", "Demacian Justice"];
+var en_gnar = ["Rage Gene", "Boomerang Throw/Boulder Toss", "Hyper/Wallop", "Hop/Crunch", "GNAR!"];
+var en_gragas = ["Happy Hour", "Barrel Roll", "Drunken Rage", "Body Slam", "Explosive Cask"];
+var en_graves = ["New Destiny", "End of the Line", "Smoke Screen", "Quickdraw", "Collateral Damage"];
+var en_hecarim = ["Warpath", "Rampage", "Spirit of Dread", "Devastating Charge", "Onslaught of Shadows"];
+var en_heimerdinger = ["Hextech Affinity", "H-28Q Apex Turret", "Hextech Micro-Rockets", "CH-2 Electron Storm Grenade"];
+var en_illaoi = ["Prophet of an Elder God", "Tentacle Smash", "Harsh Lesson", "Test of Spirit", "Leap of Faith"];
+var en_irelia = ["Ionian Fervor", "Bladesurge", "Defiant Dance", "Flawless Duet", "Vanguard's Edge"];
+var en_ivern = ["Friend of the Forest", "Rootcaller", "Brushmaker", "Triggerseed", "Daisy!"];
+var en_janna = ["Tailwind", "Howling Gale", "Howling Gale", "Zephyr", "Eye Of The Storm", "Monsoon"];
+var en_jarvaniv = [""]
+var en_jax
+var en_jayce
+var en_jhin
+var en_jinx
+var en_kaisa
+var en_kalista
+var en_karma
