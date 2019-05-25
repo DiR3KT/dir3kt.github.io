@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="html" lang="en" dir="ltr" oncontextmenu="return false">
+  <head>
+    <meta charset="utf-8">
+    <title>EASY LOL GUESSER</title>
+    <link rel="stylesheet" href="css/easy.css">
+    <script type="text/javascript" src="js/easy.js"></script>
+    <script type="text/javascript" src="js/compare-strings.js"></script>
+    <link rel="icon" href="assets/favicon.ico"/>
+  </head>
+  <body onload="printChamp()">
+    <div class="header">
+      <h1 id="title">EASY</h1>
+      <h3 id="subtitle">Guess the champion based on its 5 abilities.</h3>
+    </div>
+    <div class="mainContainer">
+      <img id="placeholder_p" src="../assets/champion.png" width="64" height="64">
+      <img id="placeholder_q" src="../assets/champion.png" width="64" height="64">
+      <img id="placeholder_w" src="../assets/champion.png" width="64" height="64">
+      <img id="placeholder_e" src="../assets/champion.png" width="64" height="64">
+      <img id="placeholder_r" src="../assets/champion.png" width="64" height="64">
+      <br>
+      <br>
+      <input id="guess"/>
+      <button class="button" id="userButton" type="submit" onclick=validateGuess();document.getElementById("guess").value="";>GUESS</button>
+      <br>
+      <br>
+      <img id="yesno" style="opacity:0;" width="120" height="120" alt="yes or no">
+      <h1 id="goodOne"> </h1>
+    </div>
+  </body>
+  <script type="text/javascript">
+    document.getElementById("guess").onkeypress = function(event){
+      if (event.keyCode == 13 || event.which == 13){
+        validateGuess()
+        document.getElementById("guess").value="";
+      }
+    };
+  </script>
+</html>

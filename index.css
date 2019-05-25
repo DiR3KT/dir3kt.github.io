@@ -1,0 +1,80 @@
+@font-face {
+  font-family: BeaufortRegular;
+  src: url(MEDIUM/css/fonts/Beaufort-Regular.ttf) format('truetype'),
+       url(MEDIUM/css/fonts/Beaufort-Regular.woff2) format('woff2'),
+       url(MEDIUM/css/fonts/Beaufort-Regular.woff) format('woff');
+}
+
+@font-face {
+  font-family: BeaufortBold;
+  src: url(MEDIUM/css/fonts/Beaufort-Bold.ttf) format('truetype'),
+       url(MEDIUM/css/fonts/Beaufort-Bold.woff2) format('woff2'),
+       url(MEDIUM/css/fonts/Beaufort-Bold.woff) format('woff');
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  background-color: #1d2429;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  position: relative;
+  text-align: center;
+}
+
+h1.title {
+  color:white;
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+div.container {
+  font-family: BeaufortBold;
+  font-size: 50px;
+  text-align: center;
+}
+
+div.choiceEasy {
+  font-family: BeaufortBold;
+  position:relative;
+  width:50%;
+  margin:0 auto;
+  float: left;
+  left:10%
+}
+.choiceEasy img {
+  position:absolute;
+  left:20%;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+.choiceEasy img.layerTop:hover {
+  opacity:0;
+}
+
+div.choiceMedium {
+  font-family: BeaufortBold;
+  position:relative;
+  width:50%;
+  margin:0 auto;
+  float: right;
+  right: 10%;
+}
+.choiceMedium img {
+  position:absolute;
+  right:20%;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+.choiceMedium img.layerTop:hover {
+  opacity:0;
+}
