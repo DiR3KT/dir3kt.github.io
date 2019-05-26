@@ -1,7 +1,7 @@
 import os
 import sys
+from PIL import Image
 
-sys.stdout.write("[")
-for filename in os.listdir("splash"):
-    sys.stdout.write("'"+filename+"', ")
-sys.stdout.write("]")
+for filename in os.listdir("icons"):
+    im = Image.open("icons/"+filename)
+    im.save("newicons/"+filename.lower())
