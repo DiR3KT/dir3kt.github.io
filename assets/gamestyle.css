@@ -43,16 +43,58 @@ html {
   margin: 5px;
 }
 
+.scoreboard {
+  width:50%;
+  margin-left: 25%;
+  text-align: center;
+}
+
+#good {
+  text-align: center;
+  font-size: 40px;
+  font-family: BeaufortBold, sans-serif;
+  width: auto;
+  height: auto;
+  display: inline-block;
+  margin-right: 3%;
+}
+
+#wrong {
+  text-align: center;
+  font-size: 40px;
+  font-family: BeaufortBold, sans-serif;
+  width: auto;
+  display: inline-block;
+  margin-left: 3%;
+}
+
 .mainContainer {
   text-align: center;
-  margin-left: -250px;
-  top: 50%;
-  margin-top: -150px;
-  left: 50%;
+  left: 0%;
   box-sizing: content-box;
   position: absolute;
-  width: 500px;
+  width: 60%;
   height: 300px;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.fa-check{
+  color: #12a828;
+  text-shadow: #042809 2px 2px 3px;
+}
+
+.fa-times{
+  color: #e03618;
+  text-shadow: #441007 2px 2px 3px;
+}
+
+.placeholders{
+  box-shadow: black 5px 5px 10px;
+}
+
+i {
+  font-size: 35px;
 }
 
 input {
@@ -66,7 +108,7 @@ input {
   box-sizing: border-box;
   font-size: 40px;
   text-align: left;
-  background-image: url('../../assets/champion_input.png');
+  background-image: url('champion_input.png');
   background-repeat: no-repeat;
   background-position: left;
   background-size: contain;
