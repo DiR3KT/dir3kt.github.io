@@ -1,15 +1,8 @@
 @font-face {
-  font-family: BeaufortRegular;
-  src: url(MEDIUM/css/fonts/Beaufort-Regular.ttf) format('truetype'),
-       url(MEDIUM/css/fonts/Beaufort-Regular.woff2) format('woff2'),
-       url(MEDIUM/css/fonts/Beaufort-Regular.woff) format('woff');
-}
-
-@font-face {
   font-family: BeaufortBold;
-  src: url(MEDIUM/css/fonts/Beaufort-Bold.ttf) format('truetype'),
-       url(MEDIUM/css/fonts/Beaufort-Bold.woff2) format('woff2'),
-       url(MEDIUM/css/fonts/Beaufort-Bold.woff) format('woff');
+  src: url(assets/fonts/Beaufort-Bold.ttf) format('truetype'),
+       url(assets/fonts/Beaufort-Bold.woff2) format('woff2'),
+       url(assets/fonts/Beaufort-Bold.woff) format('woff');
 }
 
 html {
