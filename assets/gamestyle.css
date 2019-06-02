@@ -72,11 +72,25 @@ html {
   text-align: center;
   left: 0%;
   box-sizing: content-box;
-  position: absolute;
+  position: relative;
   width: 60%;
-  height: 300px;
+  height: auto;
   margin-left: 20%;
   margin-right: 20%;
+}
+
+.mainButton {
+  text-align: center;
+  left: 0%;
+  box-sizing: content-box;
+  position: relative;
+}
+
+.mainYesorno {
+  text-align: center;
+  left: 0%;
+  box-sizing: content-box;
+  position: relative;
 }
 
 .fa-check{
@@ -99,7 +113,7 @@ i {
 
 input {
   font-family: BeaufortBold, sans-serif;
-  width: 70%;
+  width: 60%;
   height: auto;
   padding: 2px 2px;
   margin: 10px;
@@ -116,28 +130,15 @@ input {
   text-transform: uppercase;
 }
 
-#reload_button {
-  background-image: url("../assets/reload.png");
-  background-size: cover;
-  height: 70px;
-  width: 70px;
-  margin-right: 20px;
-  background-color: Transparent;
-  background-repeat:no-repeat;
-  border: none;
-  cursor:pointer;
-  overflow: hidden;
-  outline:none;
-}
-
 .button {
   background-color: inherit;
-  font-size: 40px;
+  font-size: 30px;
   border-radius: 10px;
-  margin: 10px;
+  margin: auto;
+  margin-top: 1%;
   padding: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
   font-weight: bold;
   font-family: BeaufortBold, sans-serif;
   transition-duration: 0.4s;
