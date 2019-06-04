@@ -1,6 +1,8 @@
 # League of Legends spell guesser
 Take a quiz over **144 champions** from [League of Legends](https://leagueoflegends.com)
 
+Quick link : [direkt.ga](http://direkt.ga)
+
 ## Difficulties
 Choose between [easy](https://dir3kt.github.io/EASY/) and [medium](https://dir3kt.github.io/MEDIUM/) mode. *Hard is soon to come*
 - **Easy** : Guess the champion given its 5 abilities.
