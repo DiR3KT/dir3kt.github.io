@@ -1,3 +1,7 @@
+startIndex = 0;
+endIndex = 5;
+
+//Triggered when the user pushes the Submit button.
 function userSubmit(){
   userName = document.getElementById("userInputName").value;
   userRegion = document.getElementById("userInputRegion").value;
@@ -7,6 +11,7 @@ function userSubmit(){
   else {console.log("Please provide a summoner name")}
 }
 
+//API call to get basic data from a summoner's name
 function getData(name,region){
   url='https://ahoui.herokuapp.com/getData/'+region+'/'+name;
   $.ajax({
@@ -21,6 +26,7 @@ function getData(name,region){
     });
 }
 
+//API call to get ranked data from a summoner's name
 function getRank(id, region){
   url='https://ahoui.herokuapp.com/getRank/'+region+'/'+id;
   $.ajax({
@@ -34,9 +40,11 @@ function getRank(id, region){
       error: function(xhr, status, error) {console.log("error");}
     });
 }
-function parseData(data){
-  document.getElementById("userInputName").value="";
-  parsedData=(JSON.parse(data));
+
+//Parse basic data, (follows getData() function)
+function parseData(json){
+  document.getElementById("userInputName").value="";//Clears input
+  parsedData=(JSON.parse(json));//JSON.parse data
   dID=parsedData["id"];
   dAccountID=parsedData["accountId"];
   dPuuid=parsedData["puuid"];
@@ -52,6 +60,7 @@ function parseData(data){
   }
 }
 
+//Parse ranked data, (follows getRank() function)
 function parseRank(json){
   rankData=JSON.parse(json);
   index=rankData.findIndex(item => item.queueType === "RANKED_SOLO_5x5");
@@ -69,6 +78,27 @@ function parseRank(json){
   createHtmlElements();
 }
 
+//Get match history
+function getHistory(id, region){
+  url='https://ahoui.herokuapp.com/getHistory/'+id+'/'+region+'/'+startIndex+'/'+endIndex;
+  $.ajax({
+      url: url,
+      dataType: 'JSONP',
+      contentType: 'application/json',
+      type: 'GET',
+      async: false,
+      crossDomain: true,
+      success: function(json) {parseHistory(json)},
+      error: function(xhr, status, error) {console.log("error");}
+    });
+}
+
+
+function parseHistory(json){
+  historyData=JSON.parse(json);
+  console.log(historyData);
+}
+//Prints info on user's screen
 function createHtmlElements() {
   document.getElementById("profileIcon").style.display = "block";
   document.getElementById("profileName").style.display = "block";
@@ -78,7 +108,7 @@ function createHtmlElements() {
   document.getElementById("profileName").textContent=dName;
   document.getElementById("profileLevel").textContent="Level "+dLevel;
   if (rank==true){
-    document.getElementById("profileRank").textContent=dTier+" "+dRank+"   "+dLP+"LP";
+    document.getElementById("profileRank").textContent=dTier+" "+dRank+" "+dLP+"LP";
   }
   else {
     document.getElementById("profileRank").textContent="Unranked";
