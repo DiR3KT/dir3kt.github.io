@@ -2,6 +2,7 @@
 var p,q,w,e,r,html,bgURL;
 var good=0;
 var wrong=0;
+alias=false;
 
 document.getElementsByClassName('html')[0].style.backgroundImage = 'url(../assets/splash/' + bgimages[Math.floor(Math.random()*bgimages.length)] + ')';
 
@@ -43,9 +44,11 @@ function validateGuess()
 {
   playerGuess = document.getElementById("guess").value;
   playerGuess= playerGuess.toLowerCase();
+  alias=false;
+  checkAlias();
   playerGuessRatio = compareTwoStrings(playerGuess,champions[0]);
   trueChampName(champions[0]);
-  if (playerGuessRatio>0.6)
+  if (playerGuessRatio>0.6 || alias==true)
   {
     console.log("GOOD ANSWER");
     YESURL="../assets/icons/"+champions[0]+"_0.jpg";
