@@ -13,7 +13,7 @@ function userSubmit(){
 
 //API call to get basic data from a summoner's name
 function getData(name,region){
-  url='https://ahoui.herokuapp.com/getData/'+region+'/'+name;
+  url='https://bruh-gg.glitch.me//getData/'+region+'/'+name;
   $.ajax({
       url: url,
       dataType: 'JSONP',
@@ -28,7 +28,7 @@ function getData(name,region){
 
 //API call to get ranked data from a summoner's name
 function getRank(id, region){
-  url='https://ahoui.herokuapp.com/getRank/'+region+'/'+id;
+  url='https://bruh-gg.glitch.me//getRank/'+region+'/'+id;
   $.ajax({
       url: url,
       dataType: 'JSONP',
@@ -80,7 +80,7 @@ function parseRank(json){
 
 //Get match history
 function getHistory(id, region){
-  url='https://ahoui.herokuapp.com/getHistory/'+id+'/'+region+'/'+startIndex+'/'+endIndex;
+  url='https://bruh-gg.glitch.me/getHistory/'+id+'/'+region+'/'+startIndex+'/'+endIndex;
   $.ajax({
       url: url,
       dataType: 'JSONP',
