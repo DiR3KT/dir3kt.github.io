@@ -19,6 +19,15 @@ function shuffle(array)
   return array
 }
 
+function clearChamp()
+{
+    document.getElementById("placeholder_p").src="../assets/champion.png";
+    document.getElementById("placeholder_q").src="../assets/champion.png";
+    document.getElementById("placeholder_w").src="../assets/champion.png";
+    document.getElementById("placeholder_e").src="../assets/champion.png";
+    document.getElementById("placeholder_r").src="../assets/champion.png";
+}
+
 function printChamp()
 {
   if (champions.length!==0){
@@ -42,6 +51,7 @@ function printChamp()
 
 function validateGuess()
 {
+  clearChamp();
   playerGuess = document.getElementById("guess").value;
   playerGuess= playerGuess.toLowerCase();
   alias=false;
