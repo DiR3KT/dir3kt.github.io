@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Bruh.gg</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src=index.js charset="utf-8"></script>
-    <link rel="stylesheet" href="index.css">
+    <script src="index.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="header">
@@ -13,19 +17,67 @@
         <span>Bruh.gg</span>
       </div>
       <div class="header-searchbar">
-        <input id="userInputName" placeholder="Summoner's Name" class="header-name" type="text" name="Summoner's name">
+        <input
+          id="userInputName"
+          placeholder="Summoner's Name"
+          class="header-name"
+          type="text"
+          name="Summoner's name"
+        />
         <select id="userInputRegion" class="header-region" name="">
           <option value="euw">EUW</option>
+          <option value="na">NA</option>
         </select>
-        <button id="userInputButton" onclick="userSubmit()" type="button" name="submit">Search</button>
+        <button
+          id="userInputButton"
+          onclick="userSubmit()"
+          type="button"
+          name="submit"
+        >
+          Search
+        </button>
       </div>
     </div>
     <div class="pagecontent">
       <div class="profile">
-        <img id="profileIcon" width="200px" height="200px">
-        <span id="profileName">DiREKT</span>
-        <span id="profileLevel">Level 199</span>
-        <span id="profileRank">Silver I</span>
+        <img id="profileIcon" width="200px" height="200px" />
+        <span id="profileName"></span>
+        <span id="profileLevel"></span>
+        <span id="profileRank"></span>
+      </div>
+      <div class="matchhistory">
+        <div class="match">
+          <div class="matchDiv">
+            <div class="matchType">Ranked Solo/Duo</div>
+            <div class="daysago">1 day ago</div>
+            <hr />
+            <div class="winlose">Victory</div>
+            <div class="timespent">40:00</div>
+          </div>
+          <div class="champDiv">
+            <div class="iconruneDiv">
+              <div class="champIcon"></div>
+              <div class="sumsrunesDiv">
+                <div class="sums">
+                  <div class="sum1"></div>
+                  <div class="sum2"></div>
+                </div>
+                <div class="rune">
+                  <div class="run1"></div>
+                  <div class="run2"></div>
+                </div>
+              </div>
+            </div>
+            <div class="champName">test</div>
+          </div>
+          <div class="scorekdaDiv">
+            <div class=""></div>
+          </div>
+        </div>
+
+        <div class="match">
+          <div class="champIcon"></div>
+        </div>
       </div>
     </div>
   </body>
@@ -34,5 +86,14 @@
     document.getElementById("profileName").style.display = "none";
     document.getElementById("profileLevel").style.display = "none";
     document.getElementById("profileRank").style.display = "none";
+  </script>
+  <script type="text/javascript">
+    document.getElementById("userInputName").onkeypress = function(event) {
+      if (event.keyCode == 13 || event.which == 13) {
+        userSubmit();
+        document.getElementById("userInputName").value = "";
+      }
+    };
+    var inputBox = document.getElementById("userInputName");
   </script>
 </html>

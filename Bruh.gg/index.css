@@ -1,23 +1,22 @@
 @font-face {
   font-family: Beaufort;
-  src: url(../../assets/fonts/Beaufort-Bold.ttf) format('truetype'),
-       url(../../assets/fonts/Beaufort-Bold.woff2) format('woff2'),
-       url(../../assets/fonts/Beaufort-Bold.woff) format('woff');
+  src: url(assets/fonts/Beaufort-Bold.ttf) format('truetype'),
+       url(assets/fonts/Beaufort-Bold.woff2) format('woff2'),
+       url(assets/fonts/Beaufort-Bold.woff) format('woff');
        font-weight: bold;
 }
 @font-face {
   font-family: Beaufort;
-  src: url(../../assets/fonts/Beaufort-Regular.ttf) format('truetype'),
-       url(../../assets/fonts/Beaufort-Regular.woff2) format('woff2'),
-       url(../../assets/fonts/Beaufort-Regular.woff) format('woff');
+  src: url(assets/fonts/Beaufort-Regular.ttf) format('truetype'),
+       url(assets/fonts/Beaufort-Regular.woff2) format('woff2'),
+       url(assets/fonts/Beaufort-Regular.woff) format('woff');
        font-weight: normal;
 }
 
 html {
-  background-color: rgb(153, 153, 153);
+  background-color: grey;
   height: 100%;
   width: 100%;
-  overflow-y: hidden;
   overflow-x: hidden;
 }
 
@@ -27,16 +26,27 @@ body {
   margin: 0px;
 }
 
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 2px solid grey;
+    margin-top: 2px 0;
+    margin-bottom: 2px 0;
+    padding: 0;
+}
+
+
 .header {
-  height: 8%;
+  height: 80px;
   width: 100%;
   padding: 15px;
   margin: 0px;
-  background-color: rgb(126, 143, 176);
+  background-color: turquoise;
 }
 
 .header-title {
-  font-size: 50px;
+  font-size: 60px;
   height: 100%;
   width: 30%;
   float: left;
@@ -78,12 +88,114 @@ button#userInputButton {
   margin-right: 2%;
 }
 
+.profile {
+  height: 500px;
+}
+
 .pagecontent {
-  height: 80%;
+  height: 100%;
   max-width: 600px;
   padding: 40px 40px;
   margin: 30px auto;
   background-color: white;
+}
+
+.matchhistory{
+  border: 1px solid black;
+  color: black;
+  height: auto;
+}
+
+.match{
+  height: 100px;
+  border: 1px solid grey;
+  overflow: hidden;
+  background-color: lightgreen;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+}
+
+.matchDiv{
+  width: 60px;
+  float: left;
+  font-size: 10px;
+  display: block;
+  margin: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.iconruneDiv{
+  height:80%;
+  width:auto;
+}
+
+.champDiv{
+  height: 100%;
+  width: 100px;
+  float: left;
+}
+
+.champIcon{
+  margin-top: 10px;
+  float: left;
+  height:65px;
+  width:65px;
+  background-image: url("https://via.placeholder.com/65/65");
+  border-radius: 100px;
+}
+
+.sumsrunesDiv{
+  height:100%;
+  width: auto;
+  float: right;
+}
+
+.sums{
+  margin-left: 1px;
+  height: 55px;
+  width: 25px;
+  float: left;
+}
+
+.sum1{
+  height: 45%;
+  width: 100%;
+  background-image: url(http://via.placeholder.com/25/25);
+}
+
+.sum2{
+  margin-top:10%;
+  height: 45%;
+  width: 100%;
+  background-image: url(http://via.placeholder.com/25/25);
+}
+
+.rune{
+  height: 55px;
+  width: 25px;
+  float: right;
+}
+
+.run1{
+  height: 45%;
+  width: 100%;
+  background-image: url(http://via.placeholder.com/25/25);
+}
+
+.run2{
+  margin-top:10%;
+  height: 45%;
+  width: 100%;
+  background-image: url(http://via.placeholder.com/25/25);
+}
+
+.champName{
+  height:20%;
+  font-family: Beaufort;
+  font-size: 15px;
+  text-align: center;
 }
 
 #profileIcon {

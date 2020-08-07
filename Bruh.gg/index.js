@@ -3,6 +3,7 @@ endIndex = 5;
 
 //Triggered when the user pushes the Submit button.
 function userSubmit(){
+  checkVersion();
   userName = document.getElementById("userInputName").value;
   userRegion = document.getElementById("userInputRegion").value;
   if (userName!==""){
@@ -93,7 +94,6 @@ function getHistory(id, region){
     });
 }
 
-
 function parseHistory(json){
   historyData=JSON.parse(json);
   console.log(historyData);
@@ -104,7 +104,7 @@ function createHtmlElements() {
   document.getElementById("profileName").style.display = "block";
   document.getElementById("profileLevel").style.display = "block";
   document.getElementById("profileRank").style.display = "block";
-  document.getElementById("profileIcon").src="https://ddragon.leagueoflegends.com/cdn/9.9.1/img/profileicon/"+dIconId+".png";
+  document.getElementById("profileIcon").src="https://ddragon.leagueoflegends.com/cdn/"+gameVersion+"/img/profileicon/"+dIconId+".png";
   document.getElementById("profileName").textContent=dName;
   document.getElementById("profileLevel").textContent="Level "+dLevel;
   if (rank==true){
@@ -113,4 +113,18 @@ function createHtmlElements() {
   else {
     document.getElementById("profileRank").textContent="Unranked";
   }
+}
+
+function checkVersion(){
+  url='https://ddragon.leagueoflegends.com/api/versions.json';
+  $.ajax({
+    url: url,
+    dataType: 'JSONP',
+    contentType: 'application/json',
+    type: 'GET',
+    async: false,
+    crossDomain: true,
+    success: function(json){gameVersion = json[0];},
+    error: function(xhr, status, error) {console.log("error" + xhr.statusText);gameVersion="9.19.1";}
+  });
 }
